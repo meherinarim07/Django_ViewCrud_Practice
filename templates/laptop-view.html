@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>laptop</title>
+</head>
+<body>
+<h1>This is my Laptop Page</h1>
+<p><a href="{% url 'add' %}">Add New Laptop</a></p>
+{% for i in p %}
+    {{i.brand}}
+    {{i.price}}
+<p><a href="{% url 'details' i.id  %}">Details Laptop</a></p>
+<p><a href="{% url 'update' i.id  %}">Update Laptop</a></p>
+<p><a href="{% url 'delete' i.id  %}">Delete Laptop</a></p>
+<br>
+<br>
+{% endfor %}
+</body>
+</html>
